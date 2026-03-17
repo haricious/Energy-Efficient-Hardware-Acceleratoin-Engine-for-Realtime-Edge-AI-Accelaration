@@ -15,7 +15,17 @@ module sram_buffer #(
 
     reg [DATA_WIDTH-1:0] ram_bank_A [0:DEPTH-1];
     reg [DATA_WIDTH-1:0] ram_bank_B [0:DEPTH-1];
+    integer i;
 
+    // Initialize all memory to 0 to prevent 'X' poisoning
+    initial begin
+        for (i = 0; i < DEPTH; i = i + 1) begin
+            ram_bank_A[i] = 0;
+            ram_bank_B[i] = 0;
+        end
+    end
+
+    // Write Logic: Host writes to the bank NOT being read by the Array
     always @(posedge clk) begin
         if (we) begin
             if (bank_sel == 1'b1) 
@@ -25,10 +35,12 @@ module sram_buffer #(
         end
     end
 
+    // Read Logic: Array reads from the active bank
     always @(posedge clk) begin
         if (bank_sel == 1'b0)
             dout <= ram_bank_A[addr];
         else
             dout <= ram_bank_B[addr];
     end
+
 endmodule

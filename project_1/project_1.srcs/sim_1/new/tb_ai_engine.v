@@ -20,9 +20,9 @@ module tb_ai_engine();
     wire engine_done;
 
     // ---------------------------------------------------------
-    // 2. OUTPUT DATA CATCHERS
+    // 2. OUTPUT DATA CATCHERS (UPDATED)
     // ---------------------------------------------------------
-    // These registers latch the result when engine_done pulses
+    // These registers latch the result the moment it flows out of the pipeline
     reg [7:0] catch_col_0;
     reg [7:0] catch_col_1;
     reg [7:0] catch_col_2;
@@ -30,13 +30,16 @@ module tb_ai_engine();
 
     always @(posedge clk) begin
         if (!rst_n) begin
-            catch_col_0 <= 0; catch_col_1 <= 0; 
-            catch_col_2 <= 0; catch_col_3 <= 0;
-        end else if (engine_done) begin
-            catch_col_0 <= final_psum_bus[7:0];
-            catch_col_1 <= final_psum_bus[15:8];
-            catch_col_2 <= final_psum_bus[23:16];
-            catch_col_3 <= final_psum_bus[31:24];
+            catch_col_0 <= 0; 
+            catch_col_1 <= 0; 
+            catch_col_2 <= 0; 
+            catch_col_3 <= 0;
+        end else begin
+            // If the hardware spits out a non-zero feature, latch it!
+            if (final_psum_bus[7:0]   != 0) catch_col_0 <= final_psum_bus[7:0];
+            if (final_psum_bus[15:8]  != 0) catch_col_1 <= final_psum_bus[15:8];
+            if (final_psum_bus[23:16] != 0) catch_col_2 <= final_psum_bus[23:16];
+            if (final_psum_bus[31:24] != 0) catch_col_3 <= final_psum_bus[31:24];
         end
     end
 

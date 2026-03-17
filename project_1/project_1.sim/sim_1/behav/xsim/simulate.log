@@ -7,10 +7,10 @@ Time resolution is 1 ps
    AI ACCELERATOR INFERENCE COMPLETE
 ==================================================
 Resulting Feature Map (ReLU Activated):
- -> Col 0:   0
+ -> Col 0: 200
  -> Col 1:   0
  -> Col 2:   0
  -> Col 3:   0
 ==================================================
 
-$finish called at time : 275 ns : File "D:/Projects/SIXXIS/Energy Efficient Hardware Acceleratoin Engine for Realtime Edge AI Accelaration/project_1/project_1.srcs/sim_1/new/tb_ai_engine.v" Line 112
+$finish called at time : 275 ns : File "D:/Projects/SIXXIS/Energy Efficient Hardware Acceleratoin Engine for Realtime Edge AI Accelaration/project_1/project_1.srcs/sim_1/new/tb_ai_engine.v" Line 115
