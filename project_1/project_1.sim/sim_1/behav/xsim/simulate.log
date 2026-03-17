@@ -1,0 +1,16 @@
+Time resolution is 1 ps
+--- Starting Edge AI Accelerator Final Verification ---
+[TIME: 1000] Memory files loaded from project database.
+[TIME: 41000] Triggering Autonomous Inference...
+
+==================================================
+   AI ACCELERATOR INFERENCE COMPLETE
+==================================================
+Resulting Feature Map (ReLU Activated):
+ -> Col 0:   0
+ -> Col 1:   0
+ -> Col 2:   0
+ -> Col 3:   0
+==================================================
+
+$finish called at time : 275 ns : File "D:/Projects/SIXXIS/Energy Efficient Hardware Acceleratoin Engine for Realtime Edge AI Accelaration/project_1/project_1.srcs/sim_1/new/tb_ai_engine.v" Line 112
