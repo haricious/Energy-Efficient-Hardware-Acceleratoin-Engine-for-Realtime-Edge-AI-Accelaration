@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Wed Mar 18 00:20:29 2026
+# Process ID         : 5680
+# Current directory  : D:/Projects/SIXXIS/Energy Efficient Hardware Acceleratoin Engine for Realtime Edge AI Accelaration/project_1/project_1.runs/synth_1
+# Command line       : vivado.exe -log ai_engine_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ai_engine_top.tcl
+# Log file           : D:/Projects/SIXXIS/Energy Efficient Hardware Acceleratoin Engine for Realtime Edge AI Accelaration/project_1/project_1.runs/synth_1/ai_engine_top.vds
+# Journal file       : D:/Projects/SIXXIS/Energy Efficient Hardware Acceleratoin Engine for Realtime Edge AI Accelaration/project_1/project_1.runs/synth_1\vivado.jou
+# Running On         : Haricious
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz
+# CPU Frequency      : 1800 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 8449 MB
+# Swap memory        : 9126 MB
+# Total Virtual      : 17576 MB
+# Available Virtual  : 7697 MB
+#-----------------------------------------------------------
+source ai_engine_top.tcl -notrace
